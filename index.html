@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- ====================================================================================================
+     HEAD - Configurações do documento, meta tags, fontes e estilos
+     ==================================================================================================== -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girassol - Recreação Infantil</title>
+
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- CSS - Bootstrap, Swiper e Custom -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Âncora para voltar ao topo -->
+  <div id="topo"></div>
+
+  <!-- ====================================================================================================
+       ELEMENTOS DECORATIVOS DE FUNDO - Bolinhas coloridas flutuantes
+       ==================================================================================================== -->
+  <div class="background-decor">
+        <div class="elipse-1"></div>
+        <div class="bg-shape elipse-2"></div>
+        <div class="bg-shape elipse-3"></div>
+        <div class="bg-shape elipse-4"></div>
+  </div>
+
+  <!-- ====================================================================================================
+       HEADER - Barra de navegação fixa no topo
+       ==================================================================================================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- Logo da marca -->
+        <a class="navbar-brand" href="index.html">
+          <img src="Imagens/Elementos/LogoGirassol.png" alt="LogoGirassol">
+        </a>
+
+        <!-- Botão toggle para mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu de navegação -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#Local">Local</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Colaboradores">Colaboradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Atividades">Atividades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Avaliacoes">Avaliações</a>
+            </li>
+          </ul>
+          
+          <!-- Botão de contato -->
+          <a class="button-contato" href="contato.html">Contato</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ====================================================================================================
+       MAIN - Conteúdo principal da página
+       ==================================================================================================== -->
+  <main>
+
+    <!-- ================================================================================================
+         SEÇÃO HERO - Carrossel principal de imagens (topo da página)
+         ================================================================================================ -->
+    <div id="carouselExemplo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicadores (bolinhas) do carrossel -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExemplo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExemplo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExemplo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Slides do carrossel -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active carousel-item-custom">
+          <img src="Imagens\ImgCarrossel\Carrossel1.png" class="d-block w-100" alt="Pôr do sol sobre a cidade">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Arraste para baixo para mais informações!</p>
+          </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="carousel-item carousel-item-custom">
+          <img src="Imagens\ImgCarrossel\Carrossel2.png" class="d-block w-100" alt="Cânion à noite">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Segurança e Carinho</h5>
+            <p>Ambiente seguro e monitorado onde cada criança floresce.</p>
+          </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="carousel-item carousel-item-custom">
+          <img src="Imagens\ImgCarrossel\Carrossel3.png" class="d-block w-100" alt="Penhasco sobre o mar">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Aprender Brincando</h5>
+            <p>Desenvolvimento cognitivo, motor e uso da criatividade.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles de navegação (setas) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExemplo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExemplo" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+
+    <!-- ================================================================================================
+         SEÇÃO 1: LOCAL - Cards com hover mostrando os espaços da recreação
+         ID: #Local | Links da navbar direcionam para esta seção
+         ================================================================================================ -->
+    <section id="Local" class="container my-5">
+
+      <!-- Título da seção -->
+      <div class="row text-center mb-4 mt-5">
+        <div class="col">
+          <h2>Venha conhecer nosso espaço!</h2>
+          <h6>Atividades supervisionadas para todas as idades.</h6>
+        </div>
+      </div>
+
+      <!-- Grid de cards -->
+      <div class="row justify-content-center align-items-center mt-5">
+
+        <!-- Card Principal - Piscina -->
+        <div class="col-md-5 d-flex justify-content-center mb-4">
+          <div class="card-hover-effect card-principal">
+            <img src="Imagens\Local\Piscina.jpg" alt="Área com piscina">
+            <div class="card-title-overlay">Área com piscina</div>
+            <div class="card-hover-overlay">
+              <h4>Piscina refrescante e monitoria qualificada! Aulas lúdicas e brincadeiras aquáticas com total segurança.</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Secundário - Playground -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+          <div class="card-hover-effect card-secundario">
+            <img src="Imagens\ImgCarrossel\Playground3.jpg" alt="Playground">
+            <div class="card-title-overlay">Playground</div>
+            <div class="card-hover-overlay">
+              <h4>Área ao ar livre com brinquedos variados para estimular movimento, criatividade e socialização. Brincadeira livre com supervisão responsável.</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Secundário - Refeitório -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+          <div class="card-hover-effect card-secundario">
+            <img src="Imagens\Local\Refeitorio.jpg" alt="Refeitório">
+            <div class="card-title-overlay">Refeitório</div>
+            <div class="card-hover-overlay">
+              <h4>Refeitório aconchegante e higiene garantida! Um espaço tranquilo para comer bem e criar bons hábitos.</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================================================
+         SEÇÃO 2: COLABORADORES - Carrossel Swiper com cards dos profissionais
+         ID: #Colaboradores | Links da navbar direcionam para esta seção
+         ================================================================================================ -->
+    <section id="Colaboradores" class="container my-5 py-5">
+      <div class="row align-items-center">
+
+        <!-- Título e descrição da seção -->
+        <div class="col-lg-4">
+          <h2 class="display-4 fw-bold">Conheça nossos profissionais!</h2>
+          <p class="lead text-muted">Profissionais qualificados, especializados em pedagogia. Prontos para dar suporte aos pais e filhos.</p>
+        </div>
+
+        <!-- Carrossel Swiper com cards dos profissionais -->
+        <div class="col-lg-8">
+          <div class="swiper-container-wrapper">
+
+            <div class="swiper">
+              <div class="swiper-wrapper">
+
+                <!-- Slide 1 - Adriana Monteiro -->
+                <div class="swiper-slide">
+                  <div class="professional-card">
+                    <img src="Imagens\ImgColab\Colab.VivianeDePaula.jpg" alt="Adriana Monteiro">
+                    <h5>Adriana Monteiro</h5>
+                    <p class="role">Pedagoga</p>
+                    <p class="description">Formada em Pedagogia pela Unilago. Pedagoga há 20 anos. Fundadora da Girassol.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 2 - Roberta Karlo -->
+                <div class="swiper-slide">
+                  <div class="professional-card">
+                    <img src="Imagens\ImgColab\Colab.MariaEduarda.jpg" alt="Roberta Karlo">
+                    <h5>Roberta Karlo</h5>
+                    <p class="role">Pedagoga</p>
+                    <p class="description">Formada em Pedagogia pela Unip. Pedagoga há 15 anos.</p>
+                  </div>
+                </div>
+
+                <!-- Slide 3 - Carlos Silva -->
+                <div class="swiper-slide">
+                  <div class="professional-card">
+                    <img src="Imagens\ImgColab\Colab.MariaFernanda.jpg" alt="Carlos Silva">
+                    <h5>Carlos Silva</h5>
+                    <p class="role">Psicólogo Infantil</p>
+                    <p class="description">Especialista em desenvolvimento infantil e suporte familiar.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Setas de navegação do Swiper -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================================================
+         SEÇÃO 3: ATIVIDADES - Cards expansíveis + Vídeo demonstrativo
+         ID: #Atividades | Links da navbar direcionam para esta seção
+         ================================================================================================ -->
+    <section id="Atividades" class="container my-5 py-5">
+      <div class="row align-items-center g-5">
+        
+        <!-- Coluna Esquerda: Lista de atividades com cards expansíveis ao hover -->
+        <div class="col-lg-6">
+          <h2 class="work-section-title mb-4">O que trabalhamos?</h2>
+          
+          <div class="work-items-list">
+            
+            <!-- Card 1: Atividades motoras e sensoriais -->
+            <div class="work-item">
+              <div class="work-item-header">
+                <span class="work-item-number">1</span>
+                <span class="work-item-title">Atividades motoras e sensoriais</span>
+              </div>
+              <div class="work-item-content">
+                <p>Estimulamos o desenvolvimento da coordenação motora grossa e fina através de atividades lúdicas como brincadeiras com bolas, circuitos de obstáculos, pintura com os dedos e manipulação de objetos. Trabalhamos também os sentidos através de texturas, sons e cores para um desenvolvimento integral da criança.</p>
+              </div>
+            </div>
+
+            <!-- Card 2: Reforço escolar -->
+            <div class="work-item">
+              <div class="work-item-header">
+                <span class="work-item-number">2</span>
+                <span class="work-item-title">Reforço escolar</span>
+              </div>
+              <div class="work-item-content">
+                <p>Oferecemos reforço escolar individualizado para crianças de diferentes idades, com foco em matemática, português e ciências. Nossas atividades complementam o aprendizado escolar através de métodos interativos, jogos educativos e exercícios práticos que tornam o aprendizado mais divertido e eficaz.</p>
+              </div>
+            </div>
+
+            <!-- Card 3: Criatividade -->
+            <div class="work-item">
+              <div class="work-item-header">
+                <span class="work-item-number">3</span>
+                <span class="work-item-title">Criatividade</span>
+              </div>
+              <div class="work-item-content">
+                <p>Desenvolvemos a criatividade através de atividades artísticas como pintura, desenho, colagem e escultura. Incluímos também teatro infantil, música, dança e contação de histórias para estimular a imaginação e a expressão pessoal de cada criança, valorizando sua individualidade e potencial criativo.</p>
+              </div>
+            </div>
+
+            <!-- Card 4: Socialização -->
+            <div class="work-item">
+              <div class="work-item-header">
+                <span class="work-item-number">4</span>
+                <span class="work-item-title">Socialização</span>
+              </div>
+              <div class="work-item-content">
+                <p>Promovemos o desenvolvimento de habilidades sociais essenciais através de brincadeiras em grupo, jogos cooperativos e atividades que incentivam o trabalho em equipe. Trabalhamos valores como respeito, empatia, compartilhamento e resolução de conflitos, preparando as crianças para interações saudáveis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Card com vídeo demonstrativo -->
+        <div class="col-lg-6">
+          <div class="video-card-wrapper">
+            <div class="video-card">
+              <video class="video-card-player" autoplay loop muted playsinline>
+                <source src="Imagens/Videos/VideoCard.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+              </video>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ================================================================================================
+         SEÇÃO 4: AVALIAÇÕES - Depoimentos dos clientes em cards
+         ID: #Avaliacoes | Links da navbar direcionam para esta seção
+         ================================================================================================ -->
+    <section id="Avaliacoes" class="container my-5 py-5">
+      
+      <!-- Título da seção -->
+      <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold">Veja as avaliações dos clientes!</h2>
+      </div>
+
+      <!-- Grid de depoimentos - Linha 1 -->
+      <div class="row g-4 mb-2">
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="Imagens/ImgColab/AvaliacaoBarbaraFerrari.jpg" alt="Cliente" class="avatar">
+          <div>
+            <strong>Aline Oliveira</strong>
+            <div class="small text-muted">Há 5 dias</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Ótimo atendimento, lugar agradável.”</p>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="Imagens/ImgColab/Colab.MariaEduarda.jpg" alt="Cliente" class="avatar">
+          <div>
+            <strong>Julia Arruda</strong>
+            <div class="small text-muted">Há 5 dias</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Lugar espaçoso e bem arejado, ótimo para brincadeiras.”</p>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="Imagens/ImgColab/Colab.MariaFernanda.jpg" alt="Cliente" class="avatar">
+          <div>
+            <strong>Paula Sinopai</strong>
+            <div class="small text-muted">Há 5 dias</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Ambiente tranquilo, profissionais capacitados.”</p>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="Imagens/ImgColab/Colab.VivianeDePaula.jpg" alt="Cliente" class="avatar">
+          <div>
+            <strong>Fred Moracy</strong>
+            <div class="small text-muted">Há 5 dias</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Adoro as professoras, são muito simpáticas.”</p>
+        <div class="rating">★★★★★</div>
+      </div>
+      </div>
+      </div>
+      
+      <!-- Grid de depoimentos - Linha 2 -->
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-3">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="Imagens/ImgColab/Colab.MariaEduarda.jpg" alt="Cliente" class="avatar">
+          <div>
+            <strong>Bruno Cassiano</strong>
+            <div class="small text-muted">Há 5 dias</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Ótima localização, meu filho adora a piscina!”</p>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="Imagens/ImgColab/Colab.MariaFernanda.jpg" alt="Cliente" class="avatar">
+          <div>
+            <strong>Antônio de Souza</strong>
+            <div class="small text-muted">Há 5 dias</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Me ajuda bastante com a rotina, ótima localização.”</p>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="Imagens/ImgColab/AvaliacaoBarbaraFerrari.jpg" alt="Cliente" class="avatar">
+          <div>
+            <strong>Paulo Henrique</strong>
+            <div class="small text-muted">Há 5 dias</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Adoro as professoras, são muito simpáticas.”</p>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="Imagens/ImgColab/Colab.VivianeDePaula.jpg" alt="Cliente" class="avatar">
+          <div>
+            <strong>Fred Moracy</strong>
+            <div class="small text-muted">Há 5 dias</div>
+          </div>
+        </div>
+        <p class="testimonial-text">“Muito carinho com as crianças, recomendo.”</p>
+        <div class="rating">★★★★★</div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- Fim do MAIN -->
+
+  <!-- ====================================================================================================
+       FOOTER - Rodapé com chamada para ação e botão de voltar ao topo
+       ==================================================================================================== -->
+  <footer class="site-footer mt-5">
+    <div class="container position-relative py-5">
+      
+      <!-- Borda decorativa -->
+      <div class="footer-outline"></div>
+      
+      <div class="row align-items-center">
+        
+        <!-- Conteúdo do footer: texto e botões -->
+        <div class="col-lg-8">
+          <div class="footer-content">
+            <h2 class="footer-title">Ficou interessado?</h2>
+            <h3 class="footer-subtitle">Agende agora uma visita!</h3>
+            <div class="footer-buttons">
+              <a class="button-contato" href="contato.html">Mais informações</a>
+              <a class="btn-back-to-top" href="#topo">
+                <span class="arrow-icon">↑</span>
+                <span class="back-text">Voltar ao início</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Girassol decorativo -->
+        <div class="col-lg-4 position-relative text-end">
+          <img class="footer-sunflower" src="Imagens/Elementos/Girassol.webp" alt="Girassol decorativo">
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================================================
+       SCRIPTS - Bibliotecas JavaScript e configurações
+       ==================================================================================================== -->
+  
+  <!-- Bootstrap JS - Componentes interativos (navbar, carrossel) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Swiper JS - Biblioteca para o carrossel de colaboradores -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Configuração do Swiper (Carrossel de Colaboradores) -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Quantos slides mostrar por vez
+      slidesPerView: 1,
+      // Espaço entre os slides
+      spaceBetween: 0,
+      // Deixar o carrossel em loop
+      loop: true,
+    
+      // Navegação (setas)
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // Pontos de quebra para responsividade
+      breakpoints: {
+        // Quando a tela for maior que 768px
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 0
+        },
+        // Quando a tela for maior que 992px
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 0
+        }
+      }
+    });
+  </script>
+  
+  <!-- JavaScript customizado do projeto -->
+  <script src="Javascript.js"></script>
+
+</body>
+</html>
