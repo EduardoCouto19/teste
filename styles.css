@@ -377,6 +377,41 @@ section[id] {
         width: 100%; /* Ocupa largura total em telas pequenas */
         height: 400px;
     }
+
+    /* Ajusta a largura da navbar para mobile */
+    .navbar {
+        width: 70% !important; /* Navbar ocupa 70% da tela em mobile */
+        left: 15% !important; /* Centraliza (15% de cada lado = 30% + 70% = 100%) */
+    }
+
+    /* Ajusta o logo do girassol para mobile */
+    .navbar-brand {
+        display: flex;
+        align-items: flex-end;
+        height: 55px;
+    }
+    
+    .navbar-brand img {
+        height: 40px;
+        margin-left: 15px;
+        margin-bottom: 2px;
+    }
+
+    /* Ajusta o botão dropdown para mobile */
+    .navbar-toggler {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    /* Adiciona fundo cinza ao menu dropdown mobile */
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.85);
+        border-radius: 15px;
+        margin-top: 10px;
+        padding: 15px;
+    }
 }
 
 
